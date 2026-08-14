@@ -58,21 +58,21 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary to-accent">
+    <section id="contact" className="section-padding bg-gradient-to-br from-primary to-accent">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-fade-in">
           {/* Заголовок */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="section-title text-white mb-4 text-balance">
               Получить демо-версию и расчёт под вашу задачу
             </h2>
-            <p className="text-lg text-white/80">
+            <p className="text-base sm:text-lg text-white/80">
               Оставьте контакты — я свяжусь, уточню задачу и предложу подходящий вариант внедрения.
             </p>
           </div>
 
           {/* Форма */}
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <CheckCircle size={64} className="text-success mx-auto mb-4" />

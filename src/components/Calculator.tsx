@@ -56,26 +56,26 @@ const Calculator = () => {
   };
 
   return (
-    <section id="calculator" className="py-20 bg-light-bg">
+    <section id="calculator" className="section-padding bg-light-bg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-fade-in">
           {/* Заголовок */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-4 py-2 rounded-full mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full mb-4">
               <CalcIcon size={20} />
-              <span className="font-medium">Калькулятор</span>
+              <span className="font-medium text-sm sm:text-base">Калькулятор</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-light-text mb-4">
+            <h2 className="section-title text-light-text mb-4">
               Рассчитайте примерную стоимость внедрения
             </h2>
-            <p className="text-lg text-light-textMuted">
+            <p className="text-base sm:text-lg text-light-textMuted">
               Ответьте на несколько вопросов и получите ориентировочный диапазон стоимости.
             </p>
           </div>
 
           {/* Форма калькулятора */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
               {/* Тип проекта */}
               <div>
                 <label className="block text-sm font-medium text-light-text mb-2">
@@ -162,7 +162,7 @@ const Calculator = () => {
               </div>
 
               {/* Кнопка расчета */}
-              <div className="md:col-span-2">
+              <div className="sm:col-span-2">
                 <button
                   onClick={calculatePrice}
                   disabled={!formData.projectType}
@@ -176,8 +176,8 @@ const Calculator = () => {
             {/* Результат */}
             {result && (
               <div className="animate-scale-in">
-                <div className="bg-gradient-to-r from-success/10 to-accent/10 rounded-xl p-6 text-center">
-                  <h3 className="text-2xl font-bold text-light-text mb-2">
+                <div className="bg-gradient-to-r from-success/10 to-accent/10 rounded-xl p-4 sm:p-6 text-center">
+                  <h3 className="text-lg sm:text-2xl font-bold text-light-text mb-2">
                     Ориентировочная стоимость: от {formatPrice(result.min)} до {formatPrice(result.max)}
                   </h3>
                   <p className="text-light-textMuted mb-4">

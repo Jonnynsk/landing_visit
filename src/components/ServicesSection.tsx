@@ -12,25 +12,25 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-light-bg">
+    <section id="services" className="section-padding bg-light-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Заголовок */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-light-text mb-4">
+        <div className="text-center mb-10 sm:mb-16 animate-fade-in">
+          <h2 className="section-title text-light-text mb-4">
             {content.services.title}
           </h2>
-          <p className="text-lg text-light-textMuted max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-light-textMuted max-w-3xl mx-auto">
             {content.services.subtitle}
           </p>
         </div>
 
         {/* Карточки услуг */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {content.services.items.map((service, index) => {
             const IconComponent = icons[index] || MessageCircle;
             return (
               <div key={index} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                   {/* Иконка */}
                   <div className="bg-gradient-to-br from-primary to-accent p-3 rounded-xl w-fit mb-4">
                     <IconComponent size={24} className="text-white" />

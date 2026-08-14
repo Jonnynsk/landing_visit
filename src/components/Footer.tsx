@@ -28,12 +28,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-dark-bg text-dark-text">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-dark-bg text-dark-text overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Информация о компании */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">{content.expert.name}</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">{content.expert.name}</h3>
             <p className="text-dark-textMuted mb-6 leading-relaxed">
               ИИ-агенты и автоматизация бизнес-процессов. Помогаю бизнесу экономить время и улучшать работу с клиентами.
             </p>
@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-accent" />
-                <a href={`mailto:${content.expert.email}`} className="text-dark-textMuted hover:text-white transition-colors">
+                <a href={`mailto:${content.expert.email}`} className="text-dark-textMuted hover:text-white transition-colors break-all">
                   {content.expert.email}
                 </a>
               </div>
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
 
         {/* Нижняя часть */}
-        <div className="border-t border-dark-textMuted/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-dark-textMuted/20 mt-8 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
           <p className="text-dark-textMuted text-sm">
             © {currentYear} {content.expert.name}. Все права защищены.
           </p>

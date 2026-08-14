@@ -10,23 +10,23 @@ const CasesSection = () => {
   };
 
   return (
-    <section id="cases" className="py-20 bg-light-card">
+    <section id="cases" className="section-padding bg-light-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Заголовок */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-light-text mb-4">
+        <div className="text-center mb-10 sm:mb-16 animate-fade-in">
+          <h2 className="section-title text-light-text mb-4">
             {content.cases.title}
           </h2>
-          <p className="text-lg text-light-textMuted max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-light-textMuted max-w-3xl mx-auto">
             {content.cases.subtitle}
           </p>
         </div>
 
         {/* Карточки кейсов */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-8">
           {content.cases.items.map((caseItem, index) => (
             <div key={index} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+              <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                 {/* Тег ниши */}
                 <div className="inline-flex items-center gap-2 bg-light-bg px-3 py-1 rounded-full mb-4">
                   <Target size={14} className="text-primary" />

@@ -12,9 +12,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Header />
-      <main>
+      <main className="min-w-0 overflow-x-hidden">
         <Hero />
         <PainsSection />
         <CasesSection />

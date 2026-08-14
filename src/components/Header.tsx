@@ -32,6 +32,9 @@ const Header = () => {
     { label: 'Контакты', id: 'contact' }
   ];
 
+  const textClass = isScrolled ? 'text-light-text' : 'text-dark-text';
+  const hoverClass = isScrolled ? 'hover:text-primary' : 'hover:text-accent';
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
@@ -39,12 +42,12 @@ const Header = () => {
         : 'bg-transparent'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 gap-4">
           {/* Логотип */}
-          <div className="flex-shrink-0">
+          <div className="min-w-0 flex-shrink">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-2xl font-bold text-light-text hover:text-primary transition-colors"
+              className={`text-lg sm:text-2xl font-bold truncate max-w-[200px] sm:max-w-none ${textClass} ${hoverClass} transition-colors`}
             >
               {content.expert.name}
             </button>
@@ -77,10 +80,10 @@ const Header = () => {
           </div>
 
           {/* Мобильное меню */}
-          <div className="md:hidden">
+          <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-light-text p-2"
+              className={`${textClass} p-2`}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
